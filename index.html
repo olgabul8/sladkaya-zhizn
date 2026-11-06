@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кондитерская "Сладкая жизнь" - Главная</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="parallax.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="location">г.Оренбург</div>
+            <div class="logo-main">
+                <div class="logo-title">Кондитерская</div>
+                <div class="logo-subtitle">"Сладкая жизнь"</div>
+            </div>
+            <div class="header-right">
+                <div class="phone">+7 (922) 852 58 09</div>
+                <div class="delivery-date">ближайшая дата<br>для заказа 06.11.2026</div>
+                <button class="auth-btn" id="auth-btn-header">Войти</button>
+                <button class="cart-icon" id="cart-btn-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">Главная</a>
+            <a href="torty.html" class="nav-link">Торты</a>
+            <a href="pirozhnye.html" class="nav-link">Пирожные</a>
+            <a href="vypechka.html" class="nav-link">Выпечка</a>
+            <a href="nachinki.html" class="nav-link">Начинки</a>
+            <a href="#" class="nav-link">Оплата и доставка</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="#" class="nav-link">Работа в Сладкой жизни</a>
+            <a href="#" class="nav-link">Контакты</a>
+            <a href="#" class="nav-link">Вопросы/ответы</a>
+        </nav>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Поиск продукта">
+                <button class="search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="hero-block">
+            <img src="главная.png" alt="Главный торт" class="hero-img">
+            <div class="hero-text-left">
+                <h1>Кондитерская<br>"Сладкая жизнь"</h1>
+            </div>
+            <div class="hero-text-right">
+                <p class="hero-desc">У нас вы найдёте торты на любой вкус, нежную выпечку и пирожные, которые тают во рту.</p>
+                <p class="hero-subdesc">Создайте свой идеальный десерт — выбирайте начинку сами!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ВСТАВЬТЕ ЭТО ПОСЛЕ hero-block и ДО footer -->
+
+<!-- ПЕРВЫЙ ПАРАЛЛАКС: Фоновое изображение -->
+<section class="parallax-section">
+    <div class="parallax-bg"></div>
+    <div class="parallax-content">
+        <h2>Насладитесь каждым кусочком</h2>
+        <p>Наши десерты создаются с любовью из лучших ингредиентов. Каждый торт — это маленькое произведение искусства, которое подарит вам и вашим близким незабываемые моменты счастья.</p>
+        <button class="parallax-btn" onclick="window.location.href='torty.html'">Выбрать торт</button>
+    </div>
+</section>
+
+<!-- ВТОРОЙ ПАРАЛЛАКС: Карточки с наклоном -->
+<section class="parallax-cards-section">
+    <div class="container">
+        <h2 class="section-subtitle">Почему выбирают нас?</h2>
+        <p class="section-description">Тысячи довольных клиентов и сладких моментов</p>
+        <div class="parallax-cards-grid">
+            <div class="parallax-card">
+                <div class="parallax-card-icon"></div>
+                <h3>Натуральные ингредиенты</h3>
+                <p>Используем только свежие продукты высшего качества, без консервантов и искусственных добавок.</p>
+            </div>
+            <div class="parallax-card">
+                <div class="parallax-card-icon"></div>
+                <h3>Шеф-кондитеры</h3>
+                <p>Наши рецепты создаются профессиональными кондитерами с многолетним опытом и любовью к своему делу.</p>
+            </div>
+            <div class="parallax-card">
+                <div class="parallax-card-icon"></div>
+                <h3>Бесплатная доставка</h3>
+                <p>При заказе от 3000 рублей доставим ваш десерт бесплатно в день заказа.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer-bottom">
+        <div class="logo-main">
+            <div class="logo-title">Кондитерская</div>
+            <div class="logo-subtitle">"Сладкая жизнь"</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="cake-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-cake-modal">&times;</span>
+            <h3 id="modal-cake-title">Выбор параметров</h3>
+            <div class="modal-body-layout">
+                <div class="modal-img-container"><img id="modal-cake-img" src="" alt="Фото"></div>
+                <div class="modal-options">
+                    <p class="option-title">Выберите начинку:</p>
+                    <div class="filling-options">
+                        <label class="radio-option"><input type="radio" name="filling" value="Красный бархат" checked> <span>Красный бархат</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Сникерс"> <span>Сникерс</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Трюфель"> <span>Трюфель</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Клубничный пломбир"> <span>Клубничный пломбир</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Молочная девочка"> <span>Молочная девочка</span></label>
+                    </div>
+                    <div class="modal-footer-action">
+                        <span class="modal-price" id="modal-cake-price">0Р</span>
+                        <button class="add-to-cart-btn" id="add-cake-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="script.js"></script>
+        <script src="auth.js"></script>
+        <script src="cart.js"></script>
+        <script src="parallax.js"></script>
+</body>
+</html>

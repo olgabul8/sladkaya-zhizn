@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торты - Кондитерская "Сладкая жизнь"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="location">г.Оренбург</div>
+            <div class="logo-main">
+                <div class="logo-title">Кондитерская</div>
+                <div class="logo-subtitle">"Сладкая жизнь"</div>
+            </div>
+            <div class="header-right">
+                <div class="phone">+7 (922) 852 58 09</div>
+                <div class="delivery-date">ближайшая дата<br>для заказа 06.11.2026</div>
+                <button class="auth-btn" id="auth-btn-header">Войти</button>
+                <button class="cart-icon" id="cart-btn-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="torty.html" class="nav-link active">Торты</a>
+            <a href="pirozhnye.html" class="nav-link">Пирожные</a>
+            <a href="vypechka.html" class="nav-link">Выпечка</a>
+            <a href="nachinki.html" class="nav-link">Начинки</a>
+            <a href="#" class="nav-link">Оплата и доставка</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="#" class="nav-link">Работа в Сладкой жизни</a>
+            <a href="#" class="nav-link">Контакты</a>
+            <a href="#" class="nav-link">Вопросы/ответы</a>
+        </nav>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Поиск продукта">
+                <button class="search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-title-container">
+            <h2>Торты</h2>
+            <span class="count-badge">49 товаров</span>
+        </div>
+        <div class="filter-tags">
+            <span class="tag">Новинки</span>
+            <span class="tag">Хиты</span>
+            <span class="tag">Без сахара</span>
+        </div>
+        <div class="products-grid" id="torty-grid">
+            <div class="product-card" data-id="t1" data-name="Торт &quot;Оранжевые маки&quot;" data-price="915">
+                <img src="оранжевые.png" alt="Торт Оранжевые маки">
+                <div class="product-name">Торт "Оранжевые маки"</div>
+                <div class="product-footer">
+                    <span class="product-price">915₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t2" data-name="Торт &quot;Аладдин&quot; с веерами" data-price="1115">
+                <img src="аладдин.png" alt="Торт Аладдин">
+                <div class="product-name">Торт "Аладдин" с веерами</div>
+                <div class="product-footer">
+                    <span class="product-price">1115₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t3" data-name="Торт &quot;Розовая мечта&quot;" data-price="3500">
+                <img src="мечта.png" alt="Розовая мечта">
+                <div class="product-name">Торт "Розовая мечта"</div>
+                <div class="product-footer">
+                    <span class="product-price">3500₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t4" data-name="Торт &quot;Ягодная долина&quot;" data-price="5580">
+                <img src="ягодный.png" alt="Ягодная долина">
+                <div class="product-name">Торт "Ягодная долина"</div>
+                <div class="product-footer">
+                    <span class="product-price">5580₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t5" data-name="Торт &quot;Ламбет с вишней&quot;" data-price="910">
+                <img src="вишня.png" alt="Ламбет с вишней">
+                <div class="product-name">Торт "Ламбет с вишней"</div>
+                <div class="product-footer">
+                    <span class="product-price">3910₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t6" data-name="Бенто-торт &quot;Цветы&quot;" data-price="620">
+                <img src="цветы.png" alt="Бенто-торт Цветы">
+                <div class="product-name">Бенто-торт "Цветы"</div>
+                <div class="product-footer">
+                    <span class="product-price">620₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t7" data-name="Торт &quot;Ламбет с бантиком&quot;" data-price="4500">
+                <img src="бантики.png" alt="Ламбет с бантиком">
+                <div class="product-name">Торт "Ламбет с бантиком"</div>
+                <div class="product-footer">
+                    <span class="product-price">4500₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t8" data-name="Торт &quot;Цветочный рай&quot;" data-price="4800">
+                <img src="цветочный.png" alt="Цветочный рай">
+                <div class="product-name">Торт "Цветочный рай"</div>
+                <div class="product-footer">
+                    <span class="product-price">4800₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t9" data-name="Торт &quot;Незабудка&quot;" data-price="7910">
+                <img src="незабудка.png" alt="Незабудка">
+                <div class="product-name">Торт "Незабудка"</div>
+                <div class="product-footer">
+                    <span class="product-price">7910₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t10" data-name="Бенто-торт &quot;Жемчужная корона&quot;" data-price="6520">
+                <img src="корона.png" alt="Жемчужная корона">
+                <div class="product-name">Бенто-торт "Жемчужная корона"</div>
+                <div class="product-footer">
+                    <span class="product-price">6520₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t11" data-name="Торт &quot;Ромашковая долина&quot;" data-price="2500">
+                <img src="ромашки.png" alt="Ромашковая долина">
+                <div class="product-name">Торт "Ромашковая долина"</div>
+                <div class="product-footer">
+                    <span class="product-price">2500₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+            <div class="product-card" data-id="t12" data-name="Бенто-торт &quot;Зайка&quot;" data-price="4500">
+                <img src="зайка.png" alt="Бенто-торт Зайка">
+                <div class="product-name">Бенто-торт "Зайка"</div>
+                <div class="product-footer">
+                    <span class="product-price">4500₽</span>
+                    <button class="order-btn">Заказать</button>
+                </div>
+            </div>
+        </div>
+        <div class="show-more-container">
+            <button class="show-more-btn">Показать еще</button>
+        </div>
+    </main>
+
+    <footer class="footer-bottom">
+        <div class="logo-main">
+            <div class="logo-title">Кондитерская</div>
+            <div class="logo-subtitle">"Сладкая жизнь"</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-cart-modal">&times;</span>
+            <h3>Ваша корзина</h3>
+            <div id="cart-items-container"><p class="empty-cart-text">Корзина пуста</p></div>
+            <div class="cart-total-container"><span>Итого:</span><span id="cart-total-price">0₽</span></div>
+            <button class="checkout-btn" id="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <div class="modal" id="auth-modal">
+        <div class="modal-content auth-size">
+            <span class="close-modal" id="close-auth-modal">&times;</span>
+            <div class="auth-tabs"><span class="auth-tab active" id="tab-login">Вход</span><span class="auth-tab" id="tab-register">Регистрация</span></div>
+            <form id="auth-form" class="auth-form">
+                <div class="input-group"><input type="email" id="auth-email" placeholder="E-mail" required></div>
+                <div class="input-group"><input type="password" id="auth-password" placeholder="Пароль" required></div>
+                <div class="input-group hidden" id="name-group"><input type="text" id="auth-name" placeholder="Имя"></div>
+                <button type="submit" class="auth-submit-btn" id="auth-submit-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="cake-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-cake-modal">&times;</span>
+            <h3 id="modal-cake-title">Выбор параметров торта</h3>
+            <div class="modal-body-layout">
+                <div class="modal-img-container">
+                    <img id="modal-cake-img" src="" alt="Фото торта">
+                </div>
+                <div class="modal-options">
+                    <p class="option-title">Выберите начинку:</p>
+                    <div class="filling-options">
+                        <label class="radio-option"><input type="radio" name="filling" value="Красный бархат" checked> <span>Красный бархат</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Сникерс"> <span>Сникерс</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Трюфель"> <span>Трюфель</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Клубничный пломбир"> <span>Клубничный пломбир</span></label>
+                        <label class="radio-option"><input type="radio" name="filling" value="Молочная девочка"> <span>Молочная девочка</span></label>
+                    </div>
+                    <div class="modal-footer-action">
+                        <span class="modal-price" id="modal-cake-price">0Р</span>
+                        <button class="add-to-cart-btn" id="add-cake-to-cart">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+<script src="auth.js"></script>
+<script src="cart.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выпечка - Кондитерская "Сладкая жизнь"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top">
+            <div class="location">г.Оренбург</div>
+            <div class="logo-main">
+                <div class="logo-title">Кондитерская</div>
+                <div class="logo-subtitle">"Сладкая жизнь"</div>
+            </div>
+            <div class="header-right">
+                <div class="phone">+7 (922) 852 58 09</div>
+                <div class="delivery-date">ближайшая дата<br>для заказа 06.11.2026</div>
+                <button class="auth-btn" id="auth-btn-header">Войти</button>
+                <button class="cart-icon" id="cart-btn-header">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="torty.html" class="nav-link">Торты</a>
+            <a href="pirozhnye.html" class="nav-link">Пирожные</a>
+            <a href="vypechka.html" class="nav-link active">Выпечка</a>
+            <a href="nachinki.html" class="nav-link">Начинки</a>
+            <a href="#" class="nav-link">Оплата и доставка</a>
+            <a href="#" class="nav-link">О нас</a>
+            <a href="#" class="nav-link">Работа в Сладкой жизни</a>
+            <a href="#" class="nav-link">Контакты</a>
+            <a href="#" class="nav-link">Вопросы/ответы</a>
+        </nav>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="Поиск продукта">
+                <button class="search-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-title-container">
+            <h2>Выпечка</h2>
+            <span class="count-badge">9 товаров</span>
+        </div>
+        <div class="circle-products-grid" id="vypechka-grid">
+            <div class="circle-product-card">
+                <img src="круассан.png" alt="Круассан ванильный с клубникой">
+                <div class="circle-product-name">Круассан ванильный с клубникой</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="пирог.png" alt="Пирог малиновый">
+                <div class="circle-product-name">Пирог малиновый</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="слойка.png" alt="Слойка вишнёвая">
+                <div class="circle-product-name">Слойка вишнёвая</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="тарталетка.png" alt="Тарталетка ягодная">
+                <div class="circle-product-name">Тарталетка ягодная</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="синабоны.png" alt="Синабоны">
+                <div class="circle-product-name">Синабоны</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="эклер.png" alt="Эклер ягодный">
+                <div class="circle-product-name">Эклер ягодный</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="сырок.png" alt="Сырок &quot;Клубничная нежность&quot;">
+                <div class="circle-product-name">Сырок "Клубничная нежность"</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="рулет.png" alt="Рулет &quot;Вишнёвая долина&quot;">
+                <div class="circle-product-name">Рулет "Вишнёвая долина"</div>
+            </div>
+            <div class="circle-product-card">
+                <img src="макаронс.png" alt="Макаронс">
+                <div class="circle-product-name">Макаронс</div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bottom">
+        <div class="logo-main">
+            <div class="logo-title">Кондитерская</div>
+            <div class="logo-subtitle">"Сладкая жизнь"</div>
+        </div>
+    </footer>
+
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-cart-modal">&times;</span>
+            <h3>Ваша корзина</h3>
+            <div id="cart-items-container"><p class="empty-cart-text">Корзина пуста</p></div>
+            <div class="cart-total-container"><span>Итого:</span><span id="cart-total-price">0₽</span></div>
+            <button class="checkout-btn" id="checkout-btn">Оформить заказ</button>
+        </div>
+    </div>
+
+    <div class="modal" id="auth-modal">
+        <div class="modal-content auth-size">
+            <span class="close-modal" id="close-auth-modal">&times;</span>
+            <div class="auth-tabs"><span class="auth-tab active" id="tab-login">Вход</span><span class="auth-tab" id="tab-register">Регистрация</span></div>
+            <form id="auth-form" class="auth-form">
+                <div class="input-group"><input type="email" id="auth-email" placeholder="E-mail" required></div>
+                <div class="input-group"><input type="password" id="auth-password" placeholder="Пароль" required></div>
+                <div class="input-group hidden" id="name-group"><input type="text" id="auth-name" placeholder="Имя"></div>
+                <button type="submit" class="auth-submit-btn" id="auth-submit-btn">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
