@@ -1,8 +1,5 @@
-// parallax.js - Эффекты параллакса
-
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ======================== ПЕРВЫЙ ПАРАЛЛАКС: движение фона при скролле ========================
     const parallaxBg = document.querySelector('.parallax-bg');
     const parallaxSection = document.querySelector('.parallax-section');
     
@@ -12,11 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const sectionTop = parallaxSection.offsetTop;
             const sectionHeight = parallaxSection.offsetHeight;
             
-            // Рассчитываем позицию секции относительно окна просмотра
             const viewportHeight = window.innerHeight;
             const sectionPosition = sectionTop - scrolled;
             
-            // Эффект параллакса для фона (двигается медленнее, чем скролл)
             if (sectionPosition < viewportHeight && sectionPosition + sectionHeight > 0) {
                 const speed = 0.5;
                 const yPos = -(scrolled - sectionTop) * speed;
@@ -25,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // ======================== ВТОРОЙ ПАРАЛЛАКС: движение карточек за мышью ========================
     const cards = document.querySelectorAll('.parallax-card');
     
     cards.forEach(card => {
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // ======================== Эффект параллакса для элементов при скролле (появление с анимацией) ========================
     const fadeElements = document.querySelectorAll('.parallax-card, .parallax-section');
     
     const observerOptions = {
@@ -72,7 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
     
-    // ======================== Дополнительный эффект: движение главного баннера при движении мыши ========================
     const heroBlock = document.querySelector('.hero-block');
     const heroImg = document.querySelector('.hero-img');
     
